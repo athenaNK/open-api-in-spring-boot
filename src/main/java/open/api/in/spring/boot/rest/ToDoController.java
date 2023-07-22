@@ -41,7 +41,7 @@ public class ToDoController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<Object> updateToDoItem(@PathVariable String id,
+    public ResponseEntity<ItemToDoVo> updateToDoItem(@PathVariable String id,
                                                  @RequestBody ItemToDoVo item,
                                                  @CookieValue(required = false) String canEdit,
                                                  @RequestHeader Boolean fromHost,
